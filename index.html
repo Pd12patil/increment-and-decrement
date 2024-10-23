@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increment And Decrement</title>
+    <style>
+      .cont {
+        text-align: center;
+        height: auto;
+        width: 250px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin: 100px auto;
+      }
+
+      img {
+        width: 200px;
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+      #calcu {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      .btn {
+        border: none;
+        padding: 8px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: aqua;
+        font-size: 17px;
+      }
+
+      .btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <img src="shoes.jpeg" alt="shoes" />
+      <div>
+        <button class="btn" id="btn" onclick="decrement()">-</button>
+        <span id="calcu">1</span>
+        <button class="btn" id="btn" onclick="increment()">+</button>
+      </div>
+    </div>
+
+    <script>
+
+      function increment() {
+        let increment = document.getElementById("calcu");
+        let inc = parseInt(increment.innerText);
+        increment.innerText = inc + 1;
+      }
+
+      function decrement() {
+        let decrement = document.getElementById("calcu");
+        let dec = parseInt(decrement.innerText);
+        decrement.innerText = dec - 1;
+      }
+
+    </script>
+  </body>
+</html>
